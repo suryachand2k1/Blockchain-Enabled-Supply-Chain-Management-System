@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+<head>
+<title>Blockchain-Enabled Information Sharing</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Blockchain-Enabled Information Sharing Within a
+Supply Chain: A Systematic Literature Review</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+      <li><a href="{% url 'BrowseProducts' %}">Browse Products</a></li>
+	  <li><a href="{% url 'index' %}">Logout</a></li>		
+		</center></ul>
+<br class="clearfix" />
+				</div>
+			
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>	
+			<center>
+<form name="f1" method="post" action={% url 'SearchProductAction' %} OnSubmit="return validate()">
+	{% csrf_token %}<br/>
+   <h3><b>Search Product Screen</b></h3>
+   
+	<font size="" color="black"><center>{{ data|safe }}</center></font>
+						
+						<table align="center" width="80" >
+			 
+		
+		<tr><td><font size="" color="black">Product&nbsp;Type</font></td><td><select name="t1">
+		<option value="Electronics">Electronics</option>
+		<option value="Apprael">Apprael</option>
+		<option value="Kitchen">Kitchen</option>
+		<option value="Automobiles">Automobiles</option>
+		</td></tr>
+
+		
+		         
+			<tr><td></td><td><input type="submit" value="Search">
+			</td>
+			</table>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				</div>	
+					
+				</div>
+				
+	</body>
+</html>

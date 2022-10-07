@@ -1,0 +1,11 @@
+create database Supplychain;
+use Supplychain;
+
+create table register(username varchar(50) primary key,
+password varchar(50),
+contact varchar(12),
+email varchar(50),
+address varchar(40),
+usertype varchar(40));
+
+
