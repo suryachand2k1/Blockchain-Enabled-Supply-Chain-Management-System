@@ -44,11 +44,3 @@ This project integrates blockchain technology into supply chain management, offe
 ## Documentation
 Includes a literature review on blockchain applications in supply chain management.
 
-## Contributing
-Adhere to Python and Django contribution guidelines for submitting pull requests or issues.
-
-## License
-[Specify License Here]
-
-## Contact Information
-[Provide Contact Information Here]
