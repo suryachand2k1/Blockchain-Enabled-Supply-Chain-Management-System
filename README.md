@@ -1,43 +1,54 @@
 # Blockchain-Enabled Supply Chain Management System
 
 ## Overview
-This project integrates blockchain technology into supply chain management, offering enhanced security, transparency, and efficiency. It comprises a Python-based blockchain implementation and a Django web application for interface management.
+This project integrates blockchain technology into supply chain management, offering enhanced security, transparency, and efficiency. It includes a Python-based blockchain implementation, a Django web application for user interaction, and a MySQL database for data management.
+
+## System Architecture
+- **Blockchain Backend**: Python implementation managing blockchain operations.
+- **Django Frontend**: Web interface for user interaction with the blockchain.
+- **MySQL Database**: Stores user data and transaction details.
 
 ## Key Components
 
 ### Python Blockchain Implementation
-- `Block.py`: Defines the `Block` class to create blockchain blocks. Each block includes an index, list of transactions, timestamp, previous block's hash, and a nonce for mining.
-- `Blockchain.py`: Builds upon `Block.py` to create a blockchain. It includes methods for adding new blocks, validating the chain, and ensuring data integrity through SHA-256 hashing.
-- `manage.py`: A Django management script to handle web application tasks like server running, database migrations, and administrative functions.
+- `Block.py` and `Blockchain.py`: Handle the creation and management of blockchain blocks, ensuring data integrity and secure transactions.
 
 ### Django Web Application
-- Part of a Django project named `SupplyChain`.
-- Facilitates user interaction with the blockchain system.
-- Manages data input and retrieval from the blockchain.
+- `manage.py`: Facilitates administrative tasks for the Django application.
+
+## MySQL Database Setup
+- **Database**: `Supplychain` for managing user and transaction data.
+- **Tables**: 
+  - `register`: Stores user registration details (`username`, `password`, `contact`, `email`, `address`, `usertype`).
 
 ## System Requirements
 - Python 3.x
 - Django 2.x or higher
-- Libraries: `hashlib`, `json`, `time`, `pickle`, `datetime`, `random`, `pyaes`, `pbkdf2`, `binascii`, `os`, `secrets`
+- MySQL
+- Required Python libraries: `hashlib`, `json`, `time`, `pickle`, `datetime`, `random`, `pyaes`, `pbkdf2`, `binascii`, `os`, `secrets`
 
-## Installation
-1. Clone the repository: `git clone [Repository-URL]`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Initialize Django settings: `export DJANGO_SETTINGS_MODULE=SupplyChain.settings`
-4. Run Django migrations: `python manage.py migrate`
-5. Start the Django server: `python manage.py runserver`
+## Installation & Configuration
+1. Clone the repository and install Python dependencies.
+2. Set up the Django environment and run migrations.
+3. Configure MySQL database based on provided SQL commands.
+4. Start the Django server for web application access.
 
-## Usage
+## Usage Guide
 
 ### Blockchain Operations
-- Initialize and manage the blockchain.
-- Add transactions and mine new blocks.
-- Verify blockchain integrity.
+- Manage blockchain functionality through the Python scripts.
 
 ### Django Interface
-- Access the web interface at `localhost:8000` after running the server.
-- Interact with the blockchain system through the web interface.
+- Access and interact with the blockchain system via the web interface at `http://localhost:8000`.
 
 ## Documentation
-Includes a systematic literature review on blockchain applications in supply chain management, emphasizing decentralized data management and security.
+Includes a literature review on blockchain applications in supply chain management.
 
+## Contributing
+Adhere to Python and Django contribution guidelines for submitting pull requests or issues.
+
+## License
+[Specify License Here]
+
+## Contact Information
+[Provide Contact Information Here]
