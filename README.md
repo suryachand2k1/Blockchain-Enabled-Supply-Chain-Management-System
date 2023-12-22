@@ -1,14 +1,43 @@
-# Decentralised-Information-transfer-in-a-supply-chain-using-BlockChain-
+# Blockchain-Enabled Supply Chain Management System
 
-Blockchain-Enabled Information Sharing Within a Supply Chain: A Systematic Literature Review
-In supply chain management multiple users such as Suppliers, Consumers may access system and its databases and all supply chain application may allow application owner what data to be shared with customers and what data has to be hided and all this data may store at centralized server or third part cloud servers and some malicious users may tamper or alter that data as this data stored at single centralized server and there will be no other storage to detect this data alterations and to overcome from this problem author is giving brief literature survey on Blockchain technology to migrate supply chain application from centralized server (single server storage) to decentralized Blockchain server (where data will be stored at multiple nodes or server). 
-In Blockchain technology same transaction data stored at multiple server with hash code verification and if data alter at one server then it will detected from other server as for same data hash code will get different.  For example in Blockchain technology data will be stored at multiple servers and if malicious users alter data at one server then its hash code will get changed in one server and other servers left unchanged and this changed hash code will be detected at verification time and future malicious user changes can be prevented.
-In Blockchain each data will be stored by verifying old hash codes and if old hash codes remain unchanged then data will be consider as original and unchanged and then new transaction data will be appended to Blockchain as new block. For each new data storage all blocks hash code will be verified.
-In propose paper author has given lots of literature on Blockchain technology about its advantages and disadvantages. The main advantage of Blockchain is its ability of providing secure data storage and its biggest disadvantage is verifying all hash code to add new data or transaction and this verification of data all time may consume lots of memory and take more execution time.
-In propose paper author is explaining about supply chain management using Blockchain technology and we implemented same concept and this concept consists of two users called SUPPLIERS and CONSUMERS.
-Suppliers: This user will add new product details and this details will be stored in Blockchain as smart contract. Storing data in Blockchain will be called as Smart Contract. For each product details a new block will be created and added to Blockchain and for each block old hash code get verified and then new hash code will be generated for new block also.
-Consumer: This user will fetch all product details from Blockchain and then booked a product and this booking details will be stored at Blockchain. For each Blockchain storage we can see its old and new hash code and by checking each hash code you may find that last transaction current hash code will be same with new transaction old hash code.
+## Overview
+This project integrates blockchain technology into supply chain management, offering enhanced security, transparency, and efficiency. It comprises a Python-based blockchain implementation and a Django web application for interface management.
 
+## Key Components
 
+### Python Blockchain Implementation
+- `Block.py`: Defines the `Block` class to create blockchain blocks. Each block includes an index, list of transactions, timestamp, previous block's hash, and a nonce for mining.
+- `Blockchain.py`: Builds upon `Block.py` to create a blockchain. It includes methods for adding new blocks, validating the chain, and ensuring data integrity through SHA-256 hashing.
+- `manage.py`: A Django management script to handle web application tasks like server running, database migrations, and administrative functions.
 
-# Download the whole Project File from above and Refer the docx file in it for how to run the program in detail
+### Django Web Application
+- Part of a Django project named `SupplyChain`.
+- Facilitates user interaction with the blockchain system.
+- Manages data input and retrieval from the blockchain.
+
+## System Requirements
+- Python 3.x
+- Django 2.x or higher
+- Libraries: `hashlib`, `json`, `time`, `pickle`, `datetime`, `random`, `pyaes`, `pbkdf2`, `binascii`, `os`, `secrets`
+
+## Installation
+1. Clone the repository: `git clone [Repository-URL]`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Initialize Django settings: `export DJANGO_SETTINGS_MODULE=SupplyChain.settings`
+4. Run Django migrations: `python manage.py migrate`
+5. Start the Django server: `python manage.py runserver`
+
+## Usage
+
+### Blockchain Operations
+- Initialize and manage the blockchain.
+- Add transactions and mine new blocks.
+- Verify blockchain integrity.
+
+### Django Interface
+- Access the web interface at `localhost:8000` after running the server.
+- Interact with the blockchain system through the web interface.
+
+## Documentation
+Includes a systematic literature review on blockchain applications in supply chain management, emphasizing decentralized data management and security.
+
